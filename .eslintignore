@@ -1,0 +1,7 @@
+*.css
+*.scss
+*.svg
+
+webpack.*
+
+node_modules
