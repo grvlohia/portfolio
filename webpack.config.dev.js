@@ -8,7 +8,9 @@ module.exports = {
     entry: path.resolve(__dirname, 'src', 'index.tsx'),
     output: {
         path: path.resolve(__dirname, "dist"),
-        filename: "bundle.js",
+        filename: '[name].js',
+        chunkFilename: '[name].chunk.js',
+        publicPath: '/'
     },
     mode: "development",
     devtool: "source-map",
@@ -56,6 +58,7 @@ module.exports = {
         port: 3002,
         hot: true,
         compress: true,
-        open: true
+        open: true,
+        historyApiFallback: true,
     }
 }
